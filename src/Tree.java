@@ -1,14 +1,14 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+//last level consists of duplicates
 public class Tree {
-    ArrayList<Node> nodes = new ArrayList<Node>();
-    int size = 0;
-    int height = 0;
+    private ArrayList<Node> nodes = new ArrayList<Node>();
+    private int size = 0;
+    private int height = 0;
 
-    //tree only with root having starting coin row
-    public Tree(ArrayList<Integer> coins) {
-        nodes.add(new Node(coins)); //add root
+    //tree only just a root
+    public Tree(Node root) {
+        nodes.add(new Node(root.get_coins(), root.get_player_points(), root.get_opponent_points(), root.get_round(), 0)); //add root
         size = 1;
         height = 0;
     }
@@ -16,74 +16,61 @@ public class Tree {
     //insert as child of parent_node and choosing either far left or far right coin
     public void insert(Node parent_node, String left_or_right) {
         //inserting ith element, i = size, nodes[i-1]
-        //Node parent = nodes.get(size - 1);
-        //ArrayList<Integer> coins, int point_difference, int round
-        //System.out.println("\nEntered insert: ");
         int new_round = parent_node.get_round() + 1;
-        //System.out.println("\nnew_round: " + new_round);
-        int new_point_difference = 0;
+        long new_player_points = parent_node.get_player_points();
+        long new_opponent_points = parent_node.get_opponent_points();
         ArrayList<Integer> new_coins = new ArrayList<Integer>(parent_node.get_coins());
-        if (new_round % 2 == 0 && left_or_right == "left") {
-            new_point_difference = parent_node.get_point_difference() - parent_node.get_far_left();
+
+        //if min move
+        if (new_round % 2 == 0 && left_or_right.equals("left")) {
+            new_opponent_points += parent_node.get_far_left();
             new_coins.remove(0);
         }
-        else if (new_round % 2 == 0 && left_or_right == "right") {
-            new_point_difference = parent_node.get_point_difference() - parent_node.get_far_right();
+        else if (new_round % 2 == 0 && left_or_right.equals("right")) {
+            new_opponent_points += parent_node.get_far_right();
             new_coins.remove(new_coins.size() - 1);
         }
-        else if (new_round % 2 == 1 && left_or_right == "left") {
-            new_point_difference = parent_node.get_point_difference() + parent_node.get_far_left();
+
+        //if max move
+        else if (new_round % 2 == 1 && left_or_right.equals("left")) {
+            new_player_points += parent_node.get_far_left();
             new_coins.remove(0);
         }
         else {
-            new_point_difference = parent_node.get_point_difference() + parent_node.get_far_right();
+            new_player_points += parent_node.get_far_right();
             new_coins.remove(new_coins.size() - 1);
         }
-        //System.out.println("\nnew_point_difference: " + new_point_difference);
-        //System.out.println("\nnew_coins: " + new_coins);
-        nodes.add(new Node(new_coins, new_point_difference, new_round, size));
-        ++size;
-    }
-
-    public void insert(int value, Node parent) {
-        //inserting ith element, i = size, nodes[i-1]
-        //Node parent = nodes.get(size - 1);
-        nodes.add(new Node(value, parent));
-        ++size;
-    }
-
-    public void insert(int value, int round, int prev_point_difference, ArrayList<Integer> coins) {
-        //inserting ith element, i = size, nodes[i-1]
-        Node parent = nodes.get(size - 1);
-        nodes.add(new Node(value, parent));
+        nodes.add(new Node(new_coins, new_player_points, new_opponent_points, new_round, size));
         ++size;
     }
 
     public void print() {
-        for (int i = 0; i < nodes.size(); ++i) {
-            nodes.get(i).print();
+        for (Node node : nodes) {
+            node.print();
         }
         System.out.println("Size: " + size);
         System.out.println("Height: " + height);
     }
 
     public void build_tree(int deep, ArrayList<Integer> coins) {
-        if (size == 0) {
-            insert(0, 0, 0, coins);
-            ++size;
-        }
-        for (int move = 1; move <= deep && move < coins.size(); ++move) {
+        for (int move = 1; move <= deep && move <= coins.size(); ++move) {
             ++height;
             for (int parent = 0; parent < Math.pow(2, move - 1); ++parent) { //and what if the last move?
                 int i = size + 1;
                 int parent_index = (i - 1) / 2;
                 Node parent_node = get_node(parent_index);
-                //insert(parent_node.get_far_left(), parent_node);
-                //insert(parent_node.get_far_right(), parent_node);
                 insert(parent_node, "left");
                 insert(parent_node, "right");
             }
         }
+    }
+
+    public int get_size() {
+        return size;
+    }
+
+    public int get_height() {
+        return height;
     }
 
     public Node get_node(int index) {
