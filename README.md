@@ -1,7 +1,7 @@
-# CoinGame
-# Iwo Sokal
+# CoinGame/
+Iwo Sokal
 
-# Gra w monety\
+# Gra w monety/
 Zasady:
 Jest dany rząd n monet o różnych wartościach oraz dwójka graczy. W każdym ruchu gracz dobiera monetę ze skrajnie lewej lub 
 prawej strony. Wygrywa gracz o największej sumie monet.
