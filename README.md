@@ -1,5 +1,4 @@
-# CoinGame
-Iwo Sokal
+# Iwo Sokal
 
 # Gra w monety
 Zasady:<br/>
