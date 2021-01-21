@@ -16,47 +16,47 @@ Tryb 3: java -jar CoinGame.jar -m3 -n[problem size] -k[repeats] -step[problem si
  -r[repeats for each problem size [output file name]<br/>
 Tryb 4: java -jar CoinGame.jar -m4 -n[problem size] -gen[generator type] [output file name]<br/><br/>
 
-Tryb 1 - czyta dane z pliku na podstawie których tworzy grę/gry i zapisuje wynik do innego pliku<br/ >
-Tryb 2 - tworzy losową grę o rozmiarze [n] i zapisuje wynik do innego pliku<br/ >
+Tryb 1 - czyta dane z pliku na podstawie których tworzy grę/gry i zapisuje wynik do innego pliku<br/>
+Tryb 2 - tworzy losową grę o rozmiarze [n] i zapisuje wynik do innego pliku<br/>
 Tryb 3 - tworzy [k] losowych gier o stopniowo rosnącym rozmiarze. Pierwsza gra ma rozmiar [n]. Dla danego rozmaru [n] jest
-tworzonych [r] losowych gier, a następnie rozmiar [n] problemu jest zwiększany o [step]. Wyniki są zapisywane do pliku.<br/ >
+tworzonych [r] losowych gier, a następnie rozmiar [n] problemu jest zwiększany o [step]. Wyniki są zapisywane do pliku.<br/>
 Tryb 4 - tworzy szczególny przypadek gry [gen] o rozmiarze [n] i zapisuje wynik do pliku. Dostępne są dwa przypadki:
 -asc (dla n = 5: 1, 2, 3, 4, 5)
--desc (dla n = 5: 5, 4, 3, 2, 1)<br/ ><br/ >
+-desc (dla n = 5: 5, 4, 3, 2, 1)<br/><br/>
 
 # Format danych
 Dane wejściowe są wymagane jedynie dla trybu 1. Są podawane w postaci szeregu kolejnych liczb reprezentujących wartości 
 kolejnych monet, (program nie sprawdza poprawności wprowadzonych danych), znak nowej linii (\n) oznacza zakończenie 
-łańcucha danych dla danego problemu. Sprawdzony sposób wprowadzania danych, przykład dla 2 gier o rozmiarach n = 5 i n = 6:<br/ >
-[2, 4, 1, 5, 3]<br/ >
-[6, 3, 1, 2, 4, 5]<br/ ><br/ >
+łańcucha danych dla danego problemu. Sprawdzony sposób wprowadzania danych, przykład dla 2 gier o rozmiarach n = 5 i n = 6:<br/>
+[2, 4, 1, 5, 3]<br/>
+[6, 3, 1, 2, 4, 5]<br/ ><br/>
 
 # Dane wyjściowe
-Wyniki zawierają:<br/ >
+Wyniki zawierają:<br/>
 - rozmiar problemu [n]
 - początkową zawartość tablicy reprezentującej rząd monet
 - punkty gracza rozpoczynającego po zakończeniu gry
 - punkty przeciwnika po zakończeniu gry
 - strategia gry krok po kroku w postaci tablic reprezentujących rzędy monet
 - czas w sekundach wykonania algorytmu
-Uwagi:<br/ >
-Strategia gry jest tworzona tylko dla gier o rozmiarze n < 50.<br/ >
-Stan na początku gry w postaci tablicy monet również jest zapisywany do pliku tylko dla gier o rozmiarze n < 50.<br/ >
-Czas wykonania jest mierzony jedynie dla trybu 3 oraz 4.<br/ >
+Uwagi:<br/>
+Strategia gry jest tworzona tylko dla gier o rozmiarze n < 50.<br/>
+Stan na początku gry w postaci tablicy monet również jest zapisywany do pliku tylko dla gier o rozmiarze n < 50.<br/>
+Czas wykonania jest mierzony jedynie dla trybu 3 oraz 4.<br/>
 
-Format w jakim wyniki są zapisywane do pliku:<br/ >
-Problem size = [n]<br/ >
-Starting coin row:<br/ >
-[game.starting_coins]<br/ >
-Results at the end:<br/ >
-Player points: [game.player_points]<br/ >
-Opponent points: [game.opponent_points]<br/ >
-Game strategy:<br/ >
-[game.game_strategy]<br/ >
-Elapsed time: [czas w sekundach]<br/ ><br/ >
+Format w jakim wyniki są zapisywane do pliku:<br/>
+Problem size = [n]<br/>
+Starting coin row:<br/>
+[game.starting_coins]<br/>
+Results at the end:<br/>
+Player points: [game.player_points]<br/>
+Opponent points: [game.opponent_points]<br/>
+Game strategy:<br/>
+[game.game_strategy]<br/>
+Elapsed time: [czas w sekundach]<br/><br/>
 
 Wyniki w postaci wielkości gry, punktów obu graczy po zakończeniu gry oraz, jeżeli był mierzony, czasu trwania algorytmu są 
-również wyświetlane na konsoli.<br/ ><br/ >
+również wyświetlane na konsoli.<br/><br/>
 
 # Rozwiązanie
 W programie użyłem algorytmu MinMax z odcięciem alfa-beta, które znajduje najlepsze możliwe posunięcia dla badanego drzewa 
