@@ -1,0 +1,6 @@
+Problem size n = 2001
+Results at the end:
+Player points: 1002001
+Opponent points: 1001000
+Elapsed time: 1322ms
+

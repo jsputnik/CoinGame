@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
-//last level consists of duplicates
+//used for connecting and finding nodes
 public class Tree {
     private ArrayList<Node> nodes = new ArrayList<Node>();
     private int size = 0;
     private int height = 0;
 
-    //tree only just a root
+    //build tree with just a root
     public Tree(Node root) {
         nodes.add(new Node(root.get_coins(), root.get_player_points(), root.get_opponent_points(), root.get_round(), 0)); //add root
         size = 1;
@@ -15,7 +15,7 @@ public class Tree {
 
     //insert as child of parent_node and choosing either far left or far right coin
     public void insert(Node parent_node, String left_or_right) {
-        //inserting ith element, i = size, nodes[i-1]
+        //inserting ith element, i = size, at nodes[i-1]
         int new_round = parent_node.get_round() + 1;
         long new_player_points = parent_node.get_player_points();
         long new_opponent_points = parent_node.get_opponent_points();
@@ -52,10 +52,11 @@ public class Tree {
         System.out.println("Height: " + height);
     }
 
+    //create a full tree of given height (deep)
     public void build_tree(int deep, ArrayList<Integer> coins) {
         for (int move = 1; move <= deep && move <= coins.size(); ++move) {
             ++height;
-            for (int parent = 0; parent < Math.pow(2, move - 1); ++parent) { //and what if the last move?
+            for (int parent = 0; parent < Math.pow(2, move - 1); ++parent) {
                 int i = size + 1;
                 int parent_index = (i - 1) / 2;
                 Node parent_node = get_node(parent_index);
@@ -77,6 +78,7 @@ public class Tree {
         return nodes.get(index);
     }
 
+    //functions to find childs and parent of a given node
     public Node get_left_child(Node node) {
         return nodes.get(2 * node.get_index() + 1);
     }
