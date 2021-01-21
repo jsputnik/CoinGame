@@ -20,8 +20,8 @@ Tryb 1 - czyta dane z pliku na podstawie których tworzy grę/gry i zapisuje wyn
 Tryb 2 - tworzy losową grę o rozmiarze [n] i zapisuje wynik do innego pliku<br/>
 Tryb 3 - tworzy [k] losowych gier o stopniowo rosnącym rozmiarze. Pierwsza gra ma rozmiar [n]. Dla danego rozmaru [n] jest
 tworzonych [r] losowych gier, a następnie rozmiar [n] problemu jest zwiększany o [step]. Wyniki są zapisywane do pliku.<br/>
-Tryb 4 - tworzy szczególny przypadek gry [gen] o rozmiarze [n] i zapisuje wynik do pliku. Dostępne są dwa przypadki:
--asc (dla n = 5: 1, 2, 3, 4, 5)
+Tryb 4 - tworzy szczególny przypadek gry [gen] o rozmiarze [n] i zapisuje wynik do pliku. Dostępne są dwa przypadki:<br/>
+-asc (dla n = 5: 1, 2, 3, 4, 5)<br/>
 -desc (dla n = 5: 5, 4, 3, 2, 1)<br/>
 
 # Format danych
