@@ -1,0 +1,180 @@
+Problem size n = 10001
+Results at the end:
+Player points: 25326376
+Opponent points: 24688625
+Elapsed time: 33493ms
+
+Problem size n = 10001
+Results at the end:
+Player points: 25471143
+Opponent points: 24543858
+Elapsed time: 33261ms
+
+Problem size n = 10501
+Results at the end:
+Player points: 28027533
+Opponent points: 27113218
+Elapsed time: 35519ms
+
+Problem size n = 10501
+Results at the end:
+Player points: 27836492
+Opponent points: 27304259
+Elapsed time: 36223ms
+
+Problem size n = 11001
+Results at the end:
+Player points: 30338155
+Opponent points: 30178346
+Elapsed time: 39016ms
+
+Problem size n = 11001
+Results at the end:
+Player points: 30613459
+Opponent points: 29903042
+Elapsed time: 40483ms
+
+Problem size n = 11501
+Results at the end:
+Player points: 33460052
+Opponent points: 32682199
+Elapsed time: 42951ms
+
+Problem size n = 11501
+Results at the end:
+Player points: 33337440
+Opponent points: 32804811
+Elapsed time: 44142ms
+
+Problem size n = 12001
+Results at the end:
+Player points: 36369446
+Opponent points: 35648555
+Elapsed time: 46356ms
+
+Problem size n = 12001
+Results at the end:
+Player points: 36529281
+Opponent points: 35488720
+Elapsed time: 47726ms
+
+Problem size n = 12501
+Results at the end:
+Player points: 39248352
+Opponent points: 38895399
+Elapsed time: 50466ms
+
+Problem size n = 12501
+Results at the end:
+Player points: 39648112
+Opponent points: 38495639
+Elapsed time: 51426ms
+
+Problem size n = 13001
+Results at the end:
+Player points: 42952028
+Opponent points: 41567473
+Elapsed time: 56589ms
+
+Problem size n = 13001
+Results at the end:
+Player points: 42959316
+Opponent points: 41560185
+Elapsed time: 56846ms
+
+Problem size n = 13501
+Results at the end:
+Player points: 45961117
+Opponent points: 45184134
+Elapsed time: 60937ms
+
+Problem size n = 13501
+Results at the end:
+Player points: 45932019
+Opponent points: 45213232
+Elapsed time: 57950ms
+
+Problem size n = 14001
+Results at the end:
+Player points: 49649375
+Opponent points: 48371626
+Elapsed time: 62655ms
+
+Problem size n = 14001
+Results at the end:
+Player points: 49444505
+Opponent points: 48576496
+Elapsed time: 63553ms
+
+Problem size n = 14501
+Results at the end:
+Player points: 53112417
+Opponent points: 52034334
+Elapsed time: 65010ms
+
+Problem size n = 14501
+Results at the end:
+Player points: 53475869
+Opponent points: 51670882
+Elapsed time: 65638ms
+
+Problem size n = 15001
+Results at the end:
+Player points: 56743948
+Opponent points: 55778553
+Elapsed time: 70088ms
+
+Problem size n = 15001
+Results at the end:
+Player points: 56882574
+Opponent points: 55639927
+Elapsed time: 71374ms
+
+Problem size n = 15501
+Results at the end:
+Player points: 60662318
+Opponent points: 59485933
+Elapsed time: 76556ms
+
+Problem size n = 15501
+Results at the end:
+Player points: 60519208
+Opponent points: 59629043
+Elapsed time: 75311ms
+
+Problem size n = 16001
+Results at the end:
+Player points: 64642737
+Opponent points: 63381264
+Elapsed time: 81033ms
+
+Problem size n = 16001
+Results at the end:
+Player points: 64628594
+Opponent points: 63395407
+Elapsed time: 79136ms
+
+Problem size n = 16501
+Results at the end:
+Player points: 68940762
+Opponent points: 67208989
+Elapsed time: 83734ms
+
+Problem size n = 16501
+Results at the end:
+Player points: 68966600
+Opponent points: 67183151
+Elapsed time: 85919ms
+
+Problem size n = 17001
+Results at the end:
+Player points: 73263454
+Opponent points: 71262047
+Elapsed time: 90411ms
+
+Problem size n = 17001
+Results at the end:
+Player points: 73264843
+Opponent points: 71260658
+Elapsed time: 90362ms
+

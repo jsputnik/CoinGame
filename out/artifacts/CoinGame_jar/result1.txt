@@ -1,3 +1,4 @@
+Problem size n = 5
 Starting coin row:
 [5, 2, 3, 1, 4]
 Results at the end:
@@ -11,6 +12,7 @@ Game strategy:
 [1]
 []
 
+Problem size n = 5
 Starting coin row:
 [2, 3, 1, 5, 4]
 Results at the end:
@@ -24,6 +26,7 @@ Game strategy:
 [4]
 []
 
+Problem size n = 5
 Starting coin row:
 [4, 3, 1, 5, 2]
 Results at the end:
@@ -37,6 +40,7 @@ Game strategy:
 [2]
 []
 
+Problem size n = 5
 Starting coin row:
 [3, 1, 2, 5, 4]
 Results at the end:
@@ -50,6 +54,7 @@ Game strategy:
 [4]
 []
 
+Problem size n = 5
 Starting coin row:
 [1, 2, 3, 4, 5]
 Results at the end:
@@ -63,6 +68,7 @@ Game strategy:
 [1]
 []
 
+Problem size n = 10
 Starting coin row:
 [2, 3, 1, 5, 4, 7, 9, 8, 6, 10]
 Results at the end:
@@ -81,6 +87,7 @@ Game strategy:
 [4]
 []
 
+Problem size n = 5
 Starting coin row:
 [5, 3, 2, 4, 1]
 Results at the end:
@@ -94,6 +101,7 @@ Game strategy:
 [1]
 []
 
+Problem size n = 23
 Starting coin row:
 [2, 3, 1, 5, 4, 7, 9, 8, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 Results at the end:
@@ -125,6 +133,7 @@ Game strategy:
 [1]
 []
 
+Problem size n = 27
 Starting coin row:
 [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
 Results at the end:
