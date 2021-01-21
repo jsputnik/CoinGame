@@ -14,7 +14,7 @@ Tryb 1: java -jar CoinGame.jar -m1 [input file name] [output file name]<br/>
 Tryb 2: java -jar CoinGame.jar -m2 -n[problem size] [output file name]<br/>
 Tryb 3: java -jar CoinGame.jar -m3 -n[problem size] -k[repeats] -step[problem size increase]
  -r[repeats for each problem size [output file name]<br/>
-Tryb 4: java -jar CoinGame.jar -m4 -n[problem size] -gen[generator type] [output file name]<br/><br/>
+Tryb 4: java -jar CoinGame.jar -m4 -n[problem size] -gen[generator type] [output file name]<br/>
 
 Tryb 1 - czyta dane z pliku na podstawie których tworzy grę/gry i zapisuje wynik do innego pliku<br/>
 Tryb 2 - tworzy losową grę o rozmiarze [n] i zapisuje wynik do innego pliku<br/>
@@ -22,14 +22,14 @@ Tryb 3 - tworzy [k] losowych gier o stopniowo rosnącym rozmiarze. Pierwsza gra 
 tworzonych [r] losowych gier, a następnie rozmiar [n] problemu jest zwiększany o [step]. Wyniki są zapisywane do pliku.<br/>
 Tryb 4 - tworzy szczególny przypadek gry [gen] o rozmiarze [n] i zapisuje wynik do pliku. Dostępne są dwa przypadki:
 -asc (dla n = 5: 1, 2, 3, 4, 5)
--desc (dla n = 5: 5, 4, 3, 2, 1)<br/><br/>
+-desc (dla n = 5: 5, 4, 3, 2, 1)<br/>
 
 # Format danych
 Dane wejściowe są wymagane jedynie dla trybu 1. Są podawane w postaci szeregu kolejnych liczb reprezentujących wartości 
 kolejnych monet, (program nie sprawdza poprawności wprowadzonych danych), znak nowej linii (\n) oznacza zakończenie 
 łańcucha danych dla danego problemu. Sprawdzony sposób wprowadzania danych, przykład dla 2 gier o rozmiarach n = 5 i n = 6:<br/>
 [2, 4, 1, 5, 3]<br/>
-[6, 3, 1, 2, 4, 5]<br/ ><br/>
+[6, 3, 1, 2, 4, 5]<br/>
 
 # Dane wyjściowe
 Wyniki zawierają:<br/>
@@ -53,10 +53,10 @@ Player points: [game.player_points]<br/>
 Opponent points: [game.opponent_points]<br/>
 Game strategy:<br/>
 [game.game_strategy]<br/>
-Elapsed time: [czas w sekundach]<br/><br/>
+Elapsed time: [czas w sekundach]<br/>
 
 Wyniki w postaci wielkości gry, punktów obu graczy po zakończeniu gry oraz, jeżeli był mierzony, czasu trwania algorytmu są 
-również wyświetlane na konsoli.<br/><br/>
+również wyświetlane na konsoli.<br/>
 
 # Rozwiązanie
 W programie użyłem algorytmu MinMax z odcięciem alfa-beta, które znajduje najlepsze możliwe posunięcia dla badanego drzewa 
@@ -93,5 +93,5 @@ oraz przechowywanie wyników
 
 # Ograniczenia
 Największa możliwa wysokość drzewa to k = 20, natomiast im większy rozmiar problemu n, tym mniejsze musi być k, ponieważ 
-wraz ze wzrostem n zwiększa się zajętość pamięci przez węzeł.
+wraz ze wzrostem n zwiększa się zajętość pamięci przez węzeł.<br/>
 Największy rozmiar problemu możliwy do rozwiązania dla drzew o wysokościach równych 10 wynosi między 31000 a 32000.
