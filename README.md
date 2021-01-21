@@ -1,15 +1,15 @@
-# CoinGame/
+# CoinGame
 Iwo Sokal
 
-# Gra w monety/
+# Gra w monety<br/ >
 Zasady:
 Jest dany rząd n monet o różnych wartościach oraz dwójka graczy. W każdym ruchu gracz dobiera monetę ze skrajnie lewej lub 
 prawej strony. Wygrywa gracz o największej sumie monet.
 
-Cel:
+# Cel
 Znajdywanie najlepszego możliwego wyniku dla gracza rozpoczynającego przy założeniu, że przeciwnik gra tak samo dobrze.
 
-Tryby wykonywania
+# Tryby wykonywania
 Tryb 1: java -jar CoinGame.jar -m1 [input file name] [output file name]
 Tryb 2: java -jar CoinGame.jar -m2 -n[problem size] [output file name]
 Tryb 3: java -jar CoinGame.jar -m3 -n[problem size] -k[repeats] -step[problem size increase]
@@ -24,14 +24,14 @@ Tryb 4 - tworzy szczególny przypadek gry [gen] o rozmiarze [n] i zapisuje wynik
 -asc (dla n = 5: 1, 2, 3, 4, 5)
 -desc (dla n = 5: 5, 4, 3, 2, 1)
 
-Format danych
+# Format danych
 Dane wejściowe są wymagane jedynie dla trybu 1. Są podawane w postaci szeregu kolejnych liczb reprezentujących wartości 
 kolejnych monet, (program nie sprawdza poprawności wprowadzonych danych), znak nowej linii (\n) oznacza zakończenie 
 łańcucha danych dla danego problemu. Sprawdzony sposób wprowadzania danych, przykład dla 2 gier o rozmiarach n = 5 i n = 6:
 [2, 4, 1, 5, 3]
 [6, 3, 1, 2, 4, 5]
 
-Dane wyjściowe
+# Dane wyjściowe
 Wyniki zawierają:
 - rozmiar problemu [n]
 - początkową zawartość tablicy reprezentującej rząd monet
@@ -58,10 +58,10 @@ Elapsed time: [czas w sekundach]
 Wyniki w postaci wielkości gry, punktów obu graczy po zakończeniu gry oraz, jeżeli był mierzony, czasu trwania algorytmu są 
 również wyświetlane na konsoli.
 
-Rozwiązanie
+# Rozwiązanie
 W programie użyłem algorytmu MinMax z odcięciem alfa-beta, które znajduje najlepsze możliwe posunięcia dla badanego drzewa 
 gry.
-Struktury danych
+# Struktury danych
 Drzewo jest tworzone przed uruchomieniem samego algorytmu, jego wysokość jest zależna od zmiennej max_tree_height w 
 klasie Game (ustawiona domyślnie na wartość 5, ponieważ dla zbyt dużych drzew nie starcza pamięci). W przypadku gdy 
 rozmiar problemu jest większy niż wysokość drzewa, tworzone są dodatkowe drzewa. Każde nowe drzewo jest budowane od stanu, 
@@ -73,7 +73,7 @@ który znalazł algorytm MinMax jako optymalny. Drzewo składa się z tablicy w�
 - runda, w trakcie której został wykonany dany ruch
 - indeks, służący przede wszystkim do szybkiego znajdywania rodziców i dzieci oraz samego węzła
 
-Algorytmy
+# Algorytmy
 W rzeczywistości zostały zaimplementowane dwa algorytmy:
 - pełny MinMax działający na całym drzewie. Nie jest jednak używany w programie, ponieważ działa on jedynie dla 
 problemów o bardzo małej wielkości (n < 20), co wynika z ograniczenia pamięciowego.
@@ -83,7 +83,7 @@ wykonującego dany ruch. Kolejną zaletą jest to, że kończy działanie zarów
 osiągnięciu odpowiedniego poziomu w drzewie, dzięki czemu można go uruchamiać dla wielu drzew wchodzących w skład tej samej 
 gry.
 
-Pliki źrodłowe
+# Pliki źrodłowe
 Projekt składa się z 4 plików .java:
 - Game.java - implementacja funkcji main, generatorów, algorytmu oraz funkcji pomocniczych wspomagających działanie algorytmu 
 oraz przechowywanie wyników
@@ -91,7 +91,7 @@ oraz przechowywanie wyników
 - Tree.java - drzewo gry, składające się z tablicy węzłów zawierające funkcje odpowiedzialne za budowanie drzewa
 - Node.java - węzeł w drzewie, reprezentujący ruch (stan) danego gracza zawierający funkcje dotyczące samego węzła
 
-Ograniczenia
+# Ograniczenia
 Największa możliwa wysokość drzewa to k = 20, natomiast im większy rozmiar problemu n, tym mniejsze musi być k, ponieważ 
 wraz ze wzrostem n zwiększa się zajętość pamięci przez węzeł.
 Największy rozmiar problemu możliwy do rozwiązania dla drzew o wysokościach równych 10 wynosi między 31000 a 32000.
