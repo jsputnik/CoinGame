@@ -2,7 +2,7 @@
 Iwo Sokal
 
 # Gra w monety
-Zasady:
+Zasady:<br/>
 Jest dany rząd n monet o różnych wartościach oraz dwójka graczy. W każdym ruchu gracz dobiera monetę ze skrajnie lewej lub 
 prawej strony. Wygrywa gracz o największej sumie monet.
 
@@ -10,11 +10,11 @@ prawej strony. Wygrywa gracz o największej sumie monet.
 Znajdowanie najlepszego możliwego wyniku dla gracza rozpoczynającego przy założeniu, że przeciwnik gra tak samo dobrze.
 
 # Tryby wykonywania
-Tryb 1: java -jar CoinGame.jar -m1 [input file name] [output file name]<br/ >
-Tryb 2: java -jar CoinGame.jar -m2 -n[problem size] [output file name]<br/ >
+Tryb 1: java -jar CoinGame.jar -m1 [input file name] [output file name]<br/>
+Tryb 2: java -jar CoinGame.jar -m2 -n[problem size] [output file name]<br/>
 Tryb 3: java -jar CoinGame.jar -m3 -n[problem size] -k[repeats] -step[problem size increase]
- -r[repeats for each problem size [output file name]<br/ >
-Tryb 4: java -jar CoinGame.jar -m4 -n[problem size] -gen[generator type] [output file name]<br/ ><br/ >
+ -r[repeats for each problem size [output file name]<br/>
+Tryb 4: java -jar CoinGame.jar -m4 -n[problem size] -gen[generator type] [output file name]<br/><br/>
 
 Tryb 1 - czyta dane z pliku na podstawie których tworzy grę/gry i zapisuje wynik do innego pliku<br/ >
 Tryb 2 - tworzy losową grę o rozmiarze [n] i zapisuje wynik do innego pliku<br/ >
